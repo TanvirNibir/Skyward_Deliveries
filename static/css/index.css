@@ -1,0 +1,236 @@
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
+      }
+      .nav{
+        height: 65px;
+        background-color: rgb(22, 22, 22);
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-left{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 50px;
+      }
+      .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      gmp-map-3d {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+      }
+      .map{
+        height:100%;
+        width: 85%;
+      }
+      .side-bar{
+        width:15%;
+        background-color: rgb(104, 104, 104);
+        background-image: url('../img/side_bar_background.png');
+        border-left: 5px solid rgb(37, 37, 37);
+        min-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .avatar{
+        height: 100px;
+        width: 100px;
+      }
+      .avatar-image{
+        height: 100%;
+      }
+      .username{
+        font-size: 20px;
+        color: white;
+        margin-top: 5px;
+        font-weight: 500;
+      }
+      .location{
+        margin-top: 20px;
+        display: block;
+        font-size: 20px;
+        color: white;
+        font-weight: 500;
+      }
+      .score, .fuel-point, .money,.capacity{
+        font-size: 20px;
+        color: white;
+        font-weight: 500;
+        margin-top: 5px;
+      }
+      .main{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height:70vh;
+      }
+      .dashboard{
+        height: 25vh;
+        background-color: rgb(37, 37, 37);
+        border-top: 5px solid rgb(113, 13, 131);
+        min-height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        overflow: auto;
+      }
+      .main-select-menu-button{
+        margin: 4px;
+        padding: 5px 10px;
+        border: 3px solid rgb(196, 103, 204);
+        outline: none;
+        border-radius: 50px;
+        font-size: 18px;
+        transition: all 150ms linear;
+      }
+      .main-select-menu-button:hover{
+        border: 3px solid rgb(231, 186, 236);
+        box-shadow: 0 0 5px 2px rgb(235, 175, 250);
+        color: rgb(142, 0, 170);
+      }
+      .item-name{
+        font-weight: 600;
+        color: rgb(230, 171, 241);
+        margin-right: 10px;
+      }
+      .item-select-menu-button{
+        margin: 2px;
+        padding: 2px 7px;
+        border: 1px solid rgb(196, 103, 204);
+        outline: none;
+        border-radius: 10px;
+        font-size: 12px;
+        transition: all 50ms linear;
+        margin-left: 10px;
+      }
+      .item-select-menu-button:hover{
+        border: 1px solid rgb(122, 0, 136);
+        color: rgb(142, 0, 170);
+      }
+      ::-webkit-scrollbar{
+        width: 5px;
+        background-color: blueviolet;
+      }
+      ::-webkit-scrollbar-thumb{
+        background-color: white;
+      }
+      .goods-list{
+        overflow: auto;
+        max-height: 150px;
+      }
+      .airport-menu{
+        overflow: auto;
+        max-height: 150px;
+      }
+      .message{
+        color: rgb(250, 58, 58);
+        font-size: 16px;
+      }
+
+      .goods-list button,.airport-list button{
+        margin: 2px;
+        padding: 2px 7px;
+        border: 1px solid rgb(196, 103, 204);
+        outline: none;
+        border-radius: 10px;
+        font-size: 12px;
+        transition: all 50ms linear;
+        margin-left: 10px;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+      }
+      .goods-list button :hover{
+        border: 1px solid rgb(122, 0, 136);
+        color: rgb(142, 0, 170);
+      }
+      .airport-list button :hover{
+        border: 1px solid rgb(122, 0, 136);
+        color: rgb(142, 0, 170);
+      }
+
+      
+      .username-input{
+        background-color: white;
+        border-radius: 10px;
+        border: 3px solid rgb(86, 71, 90);
+        padding: 5px 20px;
+        outline: none;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        margin-top: 8px;
+      }
+
+      .username-input:focus{
+        border: 3px solid rgb(211, 99, 236);
+      }
+     .map{
+      background-color: black;
+     }
+     .username-button{
+        padding: 4px 7px;
+        margin-left: 1px;
+        border: 3px solid rgb(86, 71, 90);
+        outline: none;
+        border-radius: 15px;
+        font-size: 12px;
+        transition: all 50ms linear;
+        margin-left: 10px;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+     }
+     .username-button:hover{
+        border: 3px solid rgb(211, 99, 236);
+        color: rgb(142, 0, 170);
+     }
+     #next-flight{
+        margin-top: 8px;
+        padding: 4px 7px;
+        margin-left: 1px;
+        border: 3px solid rgb(86, 71, 90);
+        outline: none;
+        border-radius: 15px;
+        font-size: 12px;
+        transition: all 50ms linear;
+        margin-left: 10px;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+     }
+     #next-flight:hover{
+      border: 3px solid rgb(211, 99, 236);
+      color: rgb(142, 0, 170);
+   }
+    #status-button{
+        padding: 5px 10px;
+        border: 3px solid rgb(86, 71, 90);
+        outline: none;
+        border-radius: 30px;
+        font-size: 18px;
+        transition: all 50ms linear;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        font-weight: 400;
+    }
+    #status-button:hover{
+      border: 3px solid rgb(211, 99, 236);
+      color: rgb(142, 0, 170);
+   }
+   .test-message{
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    color: rgb(122, 122, 122);
+   }

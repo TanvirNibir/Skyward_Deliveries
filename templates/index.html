@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+	<title>test</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-left">
+            <div class="title">
+                Skyward Deliveries 
+            </div>
+        </div>
+        <div class="nav-right"></div>
+    </div>
+    <div class="main">
+        <div class="map" id="map"></div>
+        <div class="side-bar">
+            <div class="avatar">
+                <img class="avatar-image" src="static/img/discord.png" alt="">
+            </div>
+            <div class="username" id="side-bar-username">username</div>
+            <div class="location">Location: <span style="color: rgb(161, 88, 184);" id="side-bar-location">location</span></div>
+            <div class="fuel-point">Fuel point: <span style="color: rgb(161, 88, 184);" id="side-bar-point">point</span></div>
+            <div class="money">Money: <span style="color: rgb(161, 88, 184);" id="side-bar-money">money</span></div>
+            <div class="capacity">Capacity: <span style="color: rgb(161, 88, 184);" id="side-bar-capacity">capacity</span></div>
+        </div>
+    </div>
+    <div class="dashboard" id="dashboard" style="position: relative;">
+        <div class="test-message">Dev_0.14b This beta version does not represent the final quality.</div>
+        <button onclick="fly()" style="display: none;">fly_test</button>
+        <div class="welcome" id="welcome" style="display: block;">
+            <form action="/submit" method="POST" id="usernameForm">
+                <h1>Welcome to Skyward deliveries!</h1>
+                <label for="username" style="display: block;">Please input your username:</label>
+                <input type="text" name="username" id="username" class="username-input">
+                <button type="submit" class="username-button">Submit</button>
+            </form>
+            <p id="message"></p>
+        </div>
+        <div class="status" id="status" style="display:none;">
+            <h2>Hi, <span style="color: rgb(161, 88, 184);" id="status-username">username</span></h2>
+            <h2>You have earned <span style="color: rgb(161, 88, 184);" id="status-money">0</span> money</h2>
+            <h2>You have flown <span style="color: rgb(161, 88, 184);" id="status-round">0</span> round</h2>
+            <button id="status-button" onclick="back_to_main()">< Back</button>
+        </div>
+        <div class="country-menu" id="country-menu" style="display: none;">
+            <h1>Please choose your country:</h1>
+            <button class="country-select-menu-button main-select-menu-button" data-country="Denmark">Denmark</button>
+            <button class="country-select-menu-button main-select-menu-button" data-country="Finland">Finland</button>
+            <button class="country-select-menu-button main-select-menu-button" data-country="Norway">Norway</button>
+            <button class="country-select-menu-button main-select-menu-button" data-country="Sweden">Sweden</button>
+        </div>
+        <div class="country-menu" id="fly-to-country-menu" style="display: none;">
+            <h1>Please choose your country you want to fly to:</h1>
+            <button class="fly-to-country-select-menu-button main-select-menu-button" data-country="Denmark">Denmark</button>
+            <button class="fly-to-country-select-menu-button main-select-menu-button" data-country="Finland">Finland</button>
+            <button class="fly-to-country-select-menu-button main-select-menu-button" data-country="Norway">Norway</button>
+            <button class="fly-to-country-select-menu-button main-select-menu-button" data-country="Sweden">Sweden</button>
+        </div>
+        
+        <div class="airport-menu" id="airport-menu" style="display: none;">
+            <h2>Available Airports:</h2>
+            <ul id="airport-list" class="airport-list"></ul>
+            <p id="resultMessage"></p>
+        </div>
+        <div class="airport-menu" id="fly-to-airport-menu" style="display: none;">
+            <h2>Available Airports:</h2>
+            <ul id="fly-to-airport-list"></ul>
+            <p id="resultMessage"></p>
+        </div>
+        <div class="main-select-menu" id="main-select-menu" style="display: none;"> 
+            <h1>Choose Things to Do:</h1>
+            <button class="main-select-menu-button" onclick="startTransportMission()">Start transport mission</button>
+            <button class="main-select-menu-button" style="display: none;">Upgrading aircraft</button>
+            <button class="main-select-menu-button" onclick="saveGame()">Save game</button>
+            <button class="main-select-menu-button" onclick="checkStatus()">Check your status</button>
+        </div>
+        
+        <div class="item-select-menu dashboard-item" id="item-select-menu" style="display: none;">
+            <h1>Please select the items to purchase.</h1>
+            <div class="goods-list"></div>
+            <button id="next-flight" onclick="startFlight()">Start Flight</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='src/map.js') }}"></script>
+    <script src="{{ url_for('static', filename='src/main.js') }}"></script>
+</body>
