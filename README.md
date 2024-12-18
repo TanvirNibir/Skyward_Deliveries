@@ -164,4 +164,4 @@ For any inquiries, feel free to reach out:
 
 - **Author:** Tanvir Nibir
 - **GitHub:** [TanvirNibir](https://github.com/TanvirNibir)
-- **Email:** (mailto:tanvir.nibir@metropolia.fi)
+- **Email:** tanvir.nibir@metropolia.fi
